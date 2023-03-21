@@ -9,14 +9,27 @@ import objects.Person;
 public class Main {
 
 	public static void main(String[] args) {
+		//Random data generated using chatgpt
+//		tapi structurenya ama object nya saya bikin sendiri ya sir :)
+		ArrayList<Address> addresses = new ArrayList<>();
+		ArrayList<Employer> employers = new ArrayList<>();
+		ArrayList<Person> people = new ArrayList<>();
+		
         Address address1 = new Address("123 Main St", "New York", "NY");
         Address address2 = new Address("456 Oak Ave", "Los Angeles", "CA");
         Address address3 = new Address("789 Maple Dr", "Chicago", "IL");
         Address address4 = new Address("321 Pine St", "Houston", "TX");
+        addresses.add(address1);
+        addresses.add(address2);
+        addresses.add(address3);
+        addresses.add(address4);
 
         Employer employer1 = new Employer("Acme Inc", "Manufacturing", new ArrayList<Person>());
         Employer employer2 = new Employer("Globex Corp", "Technology", new ArrayList<Person>());
         Employer employer3 = new Employer("Wayne Enterprises", "Finance", new ArrayList<Person>());
+        employers.add(employer1);
+        employers.add(employer2);
+        employers.add(employer3);
 
         Person person1 = new Person("John Doe", 30, address1, employer1);
         address1.addResident(person1);
@@ -58,16 +71,53 @@ public class Main {
         address2.addResident(person10);
         employer2.addEmployee(person10);
         
-        System.out.println(person1.getName() + " works for " + person1.getEmployer().getName() +
-                " in " + person1.getEmployer().getIndustry() + " industry, and lives at " +
-                person1.getAddress().getStreet() + ", " + person1.getAddress().getCity() + ", " +
-                person1.getAddress().getState());
-
-        // Display information without proper relationships
-        System.out.println(person3.getName() + " lives at " + address3.getStreet() + ", " +
-                address3.getCity() + ", " + address3.getState() + ", and works for " + employer1.getName() +
-                " in " + employer1.getIndustry() + " industry");
-                
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+        people.add(person4);
+        people.add(person5);
+        people.add(person6);
+        people.add(person7);
+        people.add(person8);
+        people.add(person9);
+        people.add(person10);
+        
+//        With proper relationship
+		System.out.println("================================================================================");
+        for (Employer e : employers) {
+			System.out.println("COMPANY NAME : " + e.getName());
+			System.out.println("INDUSTRY : " + e.getIndustry());
+			System.out.println();
+			
+			System.out.println("EMPLOYEES");
+			System.out.println("----------------------------------------------------------------------------");
+			for (Person p : e.getEmployees()) {
+				System.out.println("Name : " + p.getName());
+				System.out.println("Age : " + p.getAge());
+				System.out.println("Address : " + p.getAddress().getStreet() + ", " + p.getAddress().getCity() + ", " + p.getAddress().getState());
+				System.out.println("----------------------------------------------------------------------------");
+			}
+			
+			System.out.println("================================================================================");
+		}
+        
+//	without proper relationship
+        System.out.println("EMPLOYERS");
+        for (Employer e : employers) {
+        	System.out.println("COMPANY NAME : " + e.getName());
+        	System.out.println("INDUSTRY : " + e.getIndustry());
+        	System.out.println();
+        }
+        System.out.println();
+        
+        System.out.println("ADDRESSES");
+        for (Address a : addresses) {
+        	System.out.println("Street : " + a.getStreet());
+        	System.out.println("City : " + a.getCity());
+        	System.out.println("State : " + a.getState());
+        	System.out.println();
+        }
 	}
+	
 
 }
