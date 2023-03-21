@@ -15,6 +15,7 @@ public class Main {
 		ArrayList<Employer> employers = new ArrayList<>();
 		ArrayList<Person> people = new ArrayList<>();
 		
+//		Address bisa exist meskipun gaada person
         Address address1 = new Address("123 Main St", "New York", "NY");
         Address address2 = new Address("456 Oak Ave", "Los Angeles", "CA");
         Address address3 = new Address("789 Maple Dr", "Chicago", "IL");
@@ -24,6 +25,7 @@ public class Main {
         addresses.add(address3);
         addresses.add(address4);
 
+//      employer (harusnya) gabisa exist kalo gaada person
         Employer employer1 = new Employer("Acme Inc", "Manufacturing", new ArrayList<Person>());
         Employer employer2 = new Employer("Globex Corp", "Technology", new ArrayList<Person>());
         Employer employer3 = new Employer("Wayne Enterprises", "Finance", new ArrayList<Person>());
