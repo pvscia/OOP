@@ -14,7 +14,6 @@ public class Main {
         Address address3 = new Address("789 Maple Dr", "Chicago", "IL");
         Address address4 = new Address("321 Pine St", "Houston", "TX");
 
-        // Create Employer objects
         Employer employer1 = new Employer("Acme Inc", "Manufacturing", new ArrayList<Person>());
         Employer employer2 = new Employer("Globex Corp", "Technology", new ArrayList<Person>());
         Employer employer3 = new Employer("Wayne Enterprises", "Finance", new ArrayList<Person>());
@@ -69,6 +68,7 @@ public class Main {
                 address3.getCity() + ", " + address3.getState() + ", and works for " + employer1.getName() +
                 " in " + employer1.getIndustry() + " industry");
         
+        System.out.println("COBA GITHUB");
         
 	}
 
