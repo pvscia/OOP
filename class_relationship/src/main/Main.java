@@ -67,9 +67,7 @@ public class Main {
         System.out.println(person3.getName() + " lives at " + address3.getStreet() + ", " +
                 address3.getCity() + ", " + address3.getState() + ", and works for " + employer1.getName() +
                 " in " + employer1.getIndustry() + " industry");
-        
-        System.out.println("COBA GITHUB");
-        
+                
 	}
 
 }
